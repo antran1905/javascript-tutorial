@@ -1,0 +1,23 @@
+{
+  "name": "javascript-tutorial",
+  "version": "1.0.0",
+  "description": "Learn JavaScript from Beginner to Expert — 20 progressive coding tasks with automated progress checking",
+  "main": "check-progress.js",
+  "scripts": {
+    "check": "node check-progress.js",
+    "check:verbose": "node check-progress.js --verbose",
+    "check:task": "node check-progress.js --task",
+    "test": "node check-progress.js"
+  },
+  "keywords": [
+    "javascript",
+    "tutorial",
+    "learning",
+    "beginner",
+    "expert",
+    "tasks",
+    "exercises"
+  ],
+  "author": "",
+  "license": "MIT"
+}
