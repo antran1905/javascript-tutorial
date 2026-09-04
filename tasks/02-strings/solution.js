@@ -4,7 +4,8 @@
  * @returns {string} The capitalized string.
  */
 function capitalize(str) {
-  // TODO: capitalize first letter: 'hello' -> 'Hello'
+  if (str == "") return "";
+  return str[0].toUpperCase() + str.slice(1);
 }
 
 /**
@@ -13,7 +14,7 @@ function capitalize(str) {
  * @returns {number} The string length.
  */
 function countCharacters(str) {
-  // TODO: return the length of `str`
+  return str.length;
 }
 
 /**
@@ -22,7 +23,13 @@ function countCharacters(str) {
  * @returns {string} The reversed string.
  */
 function reverseString(str) {
-  // TODO: reverse a string: 'abc' -> 'cba'
+  let count = str.length - 1;
+  let word = "";
+  while (count >= 0) {
+    word = word + str[count];
+    count--;
+  }
+  return word;
 }
 
 /**
@@ -32,7 +39,21 @@ function reverseString(str) {
  * @returns {string} The truncated string.
  */
 function truncate(str, maxLength) {
-  // TODO: if str is longer than maxLength, cut it and add '...': truncate('Hello World', 5) -> 'Hello...'
+  let count = 0;
+  let word = "";
+  if (str.length > maxLength) {
+    while (count < maxLength) {
+      word = word + str[count];
+      count++;
+    }
+    return word + "...";
+  } else {
+    while (count < str.length) {
+      word = word + str[count];
+      count++;
+    }
+    return word;
+  }
 }
 
 /**
@@ -41,7 +62,14 @@ function truncate(str, maxLength) {
  * @returns {boolean} True if palindrome, false otherwise.
  */
 function isPalindrome(str) {
-  // TODO: check if string reads same forwards/backwards (case-insensitive): 'Racecar' -> true
+  let count = str.length - 1;
+  let word = "";
+  while (count >= 0) {
+    word = word + str[count];
+    count--;
+  }
+  if (word.toLowerCase() === str.toLowerCase()) return true;
+  return false;
 }
 
 module.exports = {
