@@ -3,7 +3,7 @@
  * @returns {string}
  */
 function getGreeting() {
-  // TODO: return 'Hello, JavaScript!'
+  return "Hello, JavaScript!";
 }
 
 /**
@@ -11,7 +11,7 @@ function getGreeting() {
  * @returns {number}
  */
 function getAge() {
-  // TODO: return 25
+  return 25;
 }
 
 /**
@@ -19,7 +19,7 @@ function getAge() {
  * @returns {boolean}
  */
 function isStudent() {
-  // TODO: return true
+  return true;
 }
 
 /**
@@ -27,7 +27,7 @@ function isStudent() {
  * @returns {null}
  */
 function getNothing() {
-  // TODO: return null
+  return null;
 }
 
 /**
@@ -36,7 +36,7 @@ function getNothing() {
  * @returns {string} The type of the value.
  */
 function getTypeOf(value) {
-  // TODO: use the typeof operator to return the type of `value`
+  return typeof value;
 }
 
 module.exports = {
@@ -44,5 +44,5 @@ module.exports = {
   getAge,
   isStudent,
   getNothing,
-  getTypeOf
+  getTypeOf,
 };
