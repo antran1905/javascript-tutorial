@@ -3,8 +3,8 @@
  * @param {string} [name="World"] - The name to greet.
  * @returns {string} The greeting string.
  */
-function greet(name) {
-  // TODO: Implement this function
+function greet(name = "World") {
+  return "Hello, " + name + "!";
 }
 
 /**
@@ -14,7 +14,7 @@ function greet(name) {
  * @returns {number} The product.
  */
 function multiply(a, b) {
-  // TODO: Implement this function
+  return a * b;
 }
 
 /**
@@ -23,7 +23,11 @@ function multiply(a, b) {
  * @returns {number} The sum.
  */
 function sum(...numbers) {
-  // TODO: Implement this function
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
 
 /**
@@ -34,7 +38,7 @@ function sum(...numbers) {
  * @returns {number} The result of the operation.
  */
 function applyOperation(a, b, operation) {
-  // TODO: Implement this function
+  return operation(a, b);
 }
 
 /**
@@ -43,7 +47,9 @@ function applyOperation(a, b, operation) {
  * @returns {function} A function that takes a number and multiplies it by factor.
  */
 function createMultiplier(factor) {
-  // TODO: Implement this function
+  return function (num) {
+    return num * factor;
+  };
 }
 
 module.exports = { greet, multiply, sum, applyOperation, createMultiplier };
