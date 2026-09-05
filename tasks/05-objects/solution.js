@@ -5,7 +5,11 @@
  * @returns {Object} The person object { name, age }.
  */
 function createPerson(name, age) {
-  // TODO: return { name, age } object
+  let student = {
+    name: name,
+    age: age,
+  };
+  return student;
 }
 
 /**
@@ -14,7 +18,7 @@ function createPerson(name, age) {
  * @returns {string} The full name formatted as 'firstName lastName'.
  */
 function getFullName(person) {
-  // TODO: given { firstName, lastName }, return 'firstName lastName'
+  return person.firstName + " " + person.lastName;
 }
 
 /**
@@ -23,7 +27,7 @@ function getFullName(person) {
  * @returns {Array<string>} An array of keys.
  */
 function getKeys(obj) {
-  // TODO: return array of object's keys
+  return Object.keys(obj);
 }
 
 /**
@@ -33,7 +37,7 @@ function getKeys(obj) {
  * @returns {boolean} True if the property exists, false otherwise.
  */
 function hasProperty(obj, prop) {
-  // TODO: return true if object has the property
+  return prop in obj;
 }
 
 /**
@@ -44,7 +48,8 @@ function hasProperty(obj, prop) {
  * @returns {Object} The new merged object.
  */
 function mergObjects(obj1, obj2) {
-  // TODO: return a new merged object (obj2 overwrites obj1 on conflicts)
+  let obj3 = { ...obj1, ...obj2 };
+  return obj3;
 }
 
 module.exports = {
@@ -52,5 +57,5 @@ module.exports = {
   getFullName,
   getKeys,
   hasProperty,
-  mergObjects
+  mergObjects,
 };
