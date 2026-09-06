@@ -189,6 +189,18 @@ npm run check:task 1    # Check only task 1
 | 19 | **Classes & OOP** | `class` syntax, constructors, methods, inheritance, `super` |
 | 20 | **Async/Await** | `async` functions, `await`, error handling, parallel execution |
 
+### 🌟 Bonus Tasks (21+)
+
+| # | Task | What You'll Learn |
+|---|------|-------------------|
+| 21 | **Operators** | Arithmetic, comparison (`==` vs `===`), logical, assignment, bitwise, ternary, nullish coalescing (`??`), optional chaining (`?.`) |
+| 22 | **Type Conversion** | Explicit (`Number()`, `String()`, `Boolean()`), implicit coercion, `parseInt`/`parseFloat`, truthy/falsy |
+| 23 | **Dates** | `Date` object, formatting, get/set methods, date arithmetic, leap years |
+| 24 | **JSON** | `JSON.parse`, `JSON.stringify`, deep cloning, pretty printing, error handling |
+| 25 | **Regular Expressions** | `RegExp`, `test()`, `match()`, `replace()`, patterns, validation |
+| 26 | **The `this` Keyword** | `this` in methods, `call()`, `apply()`, `bind()`, arrow vs regular functions |
+| 27 | **Sets & Maps** | `Set` (unique values, set operations), `Map` (key-value pairs, counting, grouping) |
+
 ---
 
 ## 🧪 Checking Your Progress
