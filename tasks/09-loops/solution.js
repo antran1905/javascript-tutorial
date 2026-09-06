@@ -5,7 +5,11 @@
  * @returns {number}
  */
 function sumRange(start, end) {
-  // TODO: Implement this function
+  let sum = 0;
+  for (let i = start; i <= end; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -14,7 +18,11 @@ function sumRange(start, end) {
  * @returns {number}
  */
 function factorial(n) {
-  // TODO: Implement this function
+  let f = 1;
+  for (let i = n; i > 0; i--) {
+    f *= i;
+  }
+  return f;
 }
 
 /**
@@ -25,7 +33,11 @@ function factorial(n) {
  * @returns {string}
  */
 function repeatString(str, times) {
-  // TODO: Implement this function
+  let result = "";
+  for (let i = 1; i <= times; i++) {
+    result += str;
+  }
+  return result;
 }
 
 /**
@@ -36,7 +48,12 @@ function repeatString(str, times) {
  * @returns {number}
  */
 function findIndex(arr, target) {
-  // TODO: Implement this function
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (arr[i] == target) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 /**
@@ -45,7 +62,16 @@ function findIndex(arr, target) {
  * @returns {number}
  */
 function countVowels(str) {
-  // TODO: Implement this function
+  let string = str.toLowerCase().split("");
+  let vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  for (let i = 0; i <= string.length - 1; i++) {
+    for (let j = 0; j <= vowels.length; j++) {
+      if (string[i] === vowels[j]) {
+        count++;
+      }
+    }
+  }
+  return count;
 }
-
 module.exports = { sumRange, factorial, repeatString, findIndex, countVowels };
