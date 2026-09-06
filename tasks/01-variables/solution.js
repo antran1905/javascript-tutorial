@@ -4,6 +4,7 @@
  */
 function getGreeting() {
   // TODO: return 'Hello, JavaScript!'
+  return 'Hello, JavaScript!';
 }
 
 /**
