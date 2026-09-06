@@ -5,7 +5,17 @@
  * @returns {string} The letter grade.
  */
 function getGrade(score) {
-  // TODO: Implement this function
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 80) {
+    return "B";
+  } else if (score >= 70) {
+    return "C";
+  } else if (score >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
 }
 
 /**
@@ -18,7 +28,15 @@ function getGrade(score) {
  * @returns {string}
  */
 function fizzBuzz(n) {
-  // TODO: Implement this function
+  if (n % 3 === 0 && n % 5 === 0) {
+    return "FizzBuzz";
+  } else if (n % 3 === 0) {
+    return "Fizz";
+  } else if (n % 5 === 0) {
+    return "Buzz";
+  } else {
+    return String(n);
+  }
 }
 
 /**
@@ -27,7 +45,17 @@ function fizzBuzz(n) {
  * @returns {string}
  */
 function getDayType(day) {
-  // TODO: Implement this function
+  if (
+    day == "Monday" ||
+    day == "Tuesday" ||
+    day == "Wednesday" ||
+    day == "Thursday" ||
+    day == "Friday"
+  ) {
+    return "Weekday";
+  } else {
+    return "Weekend";
+  }
 }
 
 /**
@@ -36,7 +64,9 @@ function getDayType(day) {
  * @returns {string}
  */
 function getSign(num) {
-  // TODO: Implement this function
+  if (num > 0) return "positive";
+  if (num < 0) return "negative";
+  return "zero";
 }
 
 /**
@@ -46,7 +76,10 @@ function getSign(num) {
  * @returns {boolean} True if age >= 18 and isCitizen is true.
  */
 function canVote(age, isCitizen) {
-  // TODO: Implement this function
+  if (age >= 18 && isCitizen == true) {
+    return true;
+  }
+  return false;
 }
 
 module.exports = { getGrade, fizzBuzz, getDayType, getSign, canVote };
