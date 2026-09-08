@@ -65,6 +65,7 @@ const LEVELS = {
   elementary:   { range: [6, 10],  color: c.cyan,    label: '📘 Elementary' },
   intermediate: { range: [11, 15], color: c.yellow,  label: '⚡ Intermediate' },
   advanced:     { range: [16, 20], color: c.magenta, label: '🔥 Advanced' },
+  bonus:        { range: [21, 99], color: c.blue,    label: '🌟 Bonus' },
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────
