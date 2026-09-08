@@ -4,7 +4,18 @@
  * @returns {object}
  */
 function createCounter() {
-  // TODO: Implement this function
+  let count = 0;
+  function increment() {
+    count++;
+  }
+  function decrement() {
+    count--;
+  }
+  function getCount() {
+    return count;
+  }
+
+  return { increment, decrement, getCount };
 }
 
 /**
@@ -13,7 +24,16 @@ function createCounter() {
  * @returns {object}
  */
 function makePrivate(initialValue) {
-  // TODO: Implement this function
+  let value = initialValue;
+  function get() {
+    return value;
+  }
+
+  function set(newValue) {
+    value = newValue;
+  }
+
+  return { get, set };
 }
 
 /**
@@ -22,13 +42,13 @@ function makePrivate(initialValue) {
  * @returns {string[]}
  */
 function blockScopeDemo() {
-  let outerVar = 'outer';
-  let innerVar = 'initial';
-  
+  let outerVar = "outer";
+  let innerVar = "initial";
+
   if (true) {
-    // TODO: Create a block-scoped innerVar that gets set to 'block'
+    innerVar = "block";
   }
-  
+
   // Do not modify the return statement
   return [outerVar, innerVar];
 }
@@ -38,7 +58,16 @@ function blockScopeDemo() {
  * @returns {function}
  */
 function createIdGenerator() {
-  // TODO: Implement this function
+  let id = 1;
+
+  function incrementIDs() {
+    let result = id;
+    id++;
+
+    return result;
+  }
+
+  return incrementIDs;
 }
 
 /**
@@ -49,8 +78,18 @@ function createIdGenerator() {
  */
 function loopWithClosure() {
   const funcs = [];
-  // TODO: Use a loop to populate `funcs` with functions that return their index.
+  for (let i = 0; i < 5; i++) {
+    funcs.push(function () {
+      return i;
+    });
+  }
   return funcs;
 }
 
-module.exports = { createCounter, makePrivate, blockScopeDemo, createIdGenerator, loopWithClosure };
+module.exports = {
+  createCounter,
+  makePrivate,
+  blockScopeDemo,
+  createIdGenerator,
+  loopWithClosure,
+};
