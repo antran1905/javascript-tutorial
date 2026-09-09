@@ -3,7 +3,8 @@
  * @returns {number[]}
  */
 function doubleAll(arr) {
-  // TODO: use .map() to double every number
+  const result = arr.map((number) => number * 2);
+  return result;
 }
 
 /**
@@ -11,7 +12,8 @@ function doubleAll(arr) {
  * @returns {Array<{name: string, age: number}>}
  */
 function getAdults(people) {
-  // TODO: use .filter() to return those with age >= 18
+  const result = people.filter((person) => person.age >= 18);
+  return result;
 }
 
 /**
@@ -19,7 +21,8 @@ function getAdults(people) {
  * @returns {number}
  */
 function totalPrice(items) {
-  // TODO: use .reduce() to sum all prices
+  const result = items.reduce((sum, numbers) => sum + numbers.price);
+  return result;
 }
 
 /**
@@ -28,7 +31,8 @@ function totalPrice(items) {
  * @returns {Object|undefined}
  */
 function findByName(people, name) {
-  // TODO: use .find() to find first person with matching name
+  const result = people.find((n) => n.name === name);
+  return result;
 }
 
 /**
@@ -36,7 +40,8 @@ function findByName(people, name) {
  * @returns {boolean}
  */
 function allPositive(arr) {
-  // TODO: use .every() to check if all numbers are positive
+  const result = arr.every((number) => number > 0);
+  return result;
 }
 
 /**
@@ -44,7 +49,16 @@ function allPositive(arr) {
  * @returns {Array<{name: string, age: number}>}
  */
 function sortByAge(people) {
-  // TODO: use .sort() to sort ascending by age. Return NEW sorted array.
+  const newPeoples = [...people];
+  newPeoples.sort((a, b) => a.age - b.age);
+  return newPeoples;
 }
 
-module.exports = { doubleAll, getAdults, totalPrice, findByName, allPositive, sortByAge };
+module.exports = {
+  doubleAll,
+  getAdults,
+  totalPrice,
+  findByName,
+  allPositive,
+  sortByAge,
+};
