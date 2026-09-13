@@ -1,17 +1,22 @@
 function toNumber(value) {
-  // TODO: Implement this function
+  return Number(value);
 }
 
 function toStringValue(value) {
   // TODO: Implement this function
+  return String(value);
 }
 
 function toBooleanValue(value) {
   // TODO: Implement this function
+  return Boolean(value);
 }
 
 function explicitParsing(str) {
-  // TODO: Implement this function
+  return {
+    int: parseInt(str),
+    float: parseFloat(str),
+  };
 }
 
 function coercionQuiz() {
@@ -20,6 +25,10 @@ function coercionQuiz() {
 
 function strictVsLoose(a, b) {
   // TODO: Implement this function
+  return {
+    loose: a == b,
+    strict: a === b,
+  };
 }
 
 module.exports = {
@@ -28,5 +37,5 @@ module.exports = {
   toBooleanValue,
   explicitParsing,
   coercionQuiz,
-  strictVsLoose
+  strictVsLoose,
 };
