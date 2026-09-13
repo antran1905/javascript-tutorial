@@ -1,17 +1,21 @@
 function toJSON(value) {
   // TODO: Implement this function
+  return JSON.stringify(value);
 }
 
 function fromJSON(jsonStr) {
   // TODO: Implement this function
+  return JSON.parse(jsonStr);
 }
 
 function deepClone(obj) {
   // TODO: Implement this function
+  return JSON.parse(JSON.stringify(obj));
 }
 
 function prettyPrint(obj) {
   // TODO: Implement this function
+  return JSON.stringify(obj, null, 2);
 }
 
 function filterAndStringify(obj, allowedKeys) {
@@ -28,5 +32,5 @@ module.exports = {
   deepClone,
   prettyPrint,
   filterAndStringify,
-  safeJsonParse
+  safeJsonParse,
 };
