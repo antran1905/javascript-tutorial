@@ -1,13 +1,13 @@
 function greetUser(name, time) {
-  // TODO: return 'Good <time>, <name>!' using template literal
+  return `Good ${time}, ${name}!`;
 }
 
 function createList(items) {
   // TODO: return a multiline numbered list string
 }
 
-function formatCurrency(amount, currency = '$') {
-  // TODO: return formatted string like '$100.00'
+function formatCurrency(amount, currency = "$") {
+  return `${currency}${amount.toFixed(2)}`;
 }
 
 function createTable(headers, rows) {
@@ -18,4 +18,10 @@ function highlight(strings, ...values) {
   // TODO: tagged template function that wraps each interpolated value in ** markers
 }
 
-module.exports = { greetUser, createList, formatCurrency, createTable, highlight };
+module.exports = {
+  greetUser,
+  createList,
+  formatCurrency,
+  createTable,
+  highlight,
+};
