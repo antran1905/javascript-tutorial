@@ -3,7 +3,9 @@
  * @returns {Promise<Object>}
  */
 function simulateFetch(url) {
-  return new Promise(resolve => setTimeout(() => resolve({ url, data: 'Response from ' + url }), 20));
+  return new Promise((resolve) =>
+    setTimeout(() => resolve({ url, data: "Response from " + url }), 20),
+  );
 }
 
 /**
@@ -12,7 +14,7 @@ function simulateFetch(url) {
  * @returns {Promise<number>}
  */
 async function asyncAdd(a, b) {
-  // TODO: return a + b (automatically wrapped in a promise)
+  return a + b;
 }
 
 /**
@@ -49,4 +51,11 @@ async function processItems(items, asyncProcessor) {
   // TODO: process items sequentially using asyncProcessor(item)
 }
 
-module.exports = { simulateFetch, asyncAdd, fetchSequential, fetchParallel, asyncRetry, processItems };
+module.exports = {
+  simulateFetch,
+  asyncAdd,
+  fetchSequential,
+  fetchParallel,
+  asyncRetry,
+  processItems,
+};
