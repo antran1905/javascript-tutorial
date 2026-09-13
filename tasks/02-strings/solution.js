@@ -5,6 +5,8 @@
  */
 function capitalize(str) {
   // TODO: capitalize first letter: 'hello' -> 'Hello'
+  let str= 'hello';
+  let capitalizeStr= str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 /**
@@ -14,6 +16,7 @@ function capitalize(str) {
  */
 function countCharacters(str) {
   // TODO: return the length of `str`
+  return str.length;
 }
 
 /**
@@ -23,6 +26,7 @@ function countCharacters(str) {
  */
 function reverseString(str) {
   // TODO: reverse a string: 'abc' -> 'cba'
+  return str.split('').reverse().join('');
 }
 
 /**
@@ -33,6 +37,10 @@ function reverseString(str) {
  */
 function truncate(str, maxLength) {
   // TODO: if str is longer than maxLength, cut it and add '...': truncate('Hello World', 5) -> 'Hello...'
+  if (str.length > maxLength) {
+    return str.substring(0, maxLength) + '...';
+  }
+  return str;
 }
 
 /**
@@ -42,6 +50,10 @@ function truncate(str, maxLength) {
  */
 function isPalindrome(str) {
   // TODO: check if string reads same forwards/backwards (case-insensitive): 'Racecar' -> true
+}if (str.toLowerCase() === str.toLowerCase().split('').reverse().join('')) {
+  return true;
+} else {
+  return false;
 }
 
 module.exports = {

@@ -4,8 +4,9 @@
  * @returns {string} The greeting string.
  */
 function greet(name) {
-  // TODO: Implement this function
-}
+  // TODO:  Implement this function
+}console.log('name');
+
 
 /**
  * Multiplies two numbers.
@@ -15,6 +16,8 @@ function greet(name) {
  */
 function multiply(a, b) {
   // TODO: Implement this function
+}function add(a, b) {
+  return a + b;
 }
 
 /**
@@ -35,7 +38,11 @@ function sum(...numbers) {
  */
 function applyOperation(a, b, operation) {
   // TODO: Implement this function
+}let total =0;
+for (i=0; i<numbers.length; i++){
+  total+= numbers[i];
 }
+return total;
 
 /**
  * Creates a function that multiplies its argument by a given factor.
@@ -44,6 +51,8 @@ function applyOperation(a, b, operation) {
  */
 function createMultiplier(factor) {
   // TODO: Implement this function
-}
+}return function(num) {
+  return num * factor;
+};
 
 module.exports = { greet, multiply, sum, applyOperation, createMultiplier };

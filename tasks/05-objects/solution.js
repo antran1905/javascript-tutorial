@@ -6,7 +6,8 @@
  */
 function createPerson(name, age) {
   // TODO: return { name, age } object
-}
+}const person ={ name: Hao ,age: 19};
+return person;
 
 /**
  * Returns the full name of a person.
@@ -15,7 +16,7 @@ function createPerson(name, age) {
  */
 function getFullName(person) {
   // TODO: given { firstName, lastName }, return 'firstName lastName'
-}
+}return `${person.firstName} ${person.lastName}`;
 
 /**
  * Returns an array of an object's keys.
@@ -24,7 +25,7 @@ function getFullName(person) {
  */
 function getKeys(obj) {
   // TODO: return array of object's keys
-}
+}return Object.keys(obj);
 
 /**
  * Checks if an object has a specific property.
@@ -34,7 +35,7 @@ function getKeys(obj) {
  */
 function hasProperty(obj, prop) {
   // TODO: return true if object has the property
-}
+}return property in obj;
 
 /**
  * Merges two objects together into a new object.
@@ -45,7 +46,7 @@ function hasProperty(obj, prop) {
  */
 function mergObjects(obj1, obj2) {
   // TODO: return a new merged object (obj2 overwrites obj1 on conflicts)
-}
+}return mergedObj = { ...obj1, ...obj2 };
 
 module.exports = {
   createPerson,
