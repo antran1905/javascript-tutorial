@@ -1,21 +1,38 @@
 function getFirstTwo(arr) {
-  // TODO: use array destructuring to return { first, second }
+  const [first, second] = arr;
+  return { first, second };
 }
 
 function swapValues(a, b) {
-  // TODO: use destructuring to swap two values, return [b, a]
+  [a, b] = [b, a];
+  return [a, b];
 }
 
 function extractName(user) {
-  // TODO: given { name: { first, last }, age }, return 'first last'
+  const {
+    name: { first, last },
+  } = user;
+  return `${first} ${last}`;
 }
 
 function withDefaults(options) {
-  // TODO: destruct with defaults { color = 'blue', size = 'medium', count = 1 }. Return object.
+  const { color = "blue", size = "medium", count = 1 } = options;
+  return { color, size, count };
 }
 
 function getScores(student) {
   // TODO: given { name, scores: [math, english, science] }, return { name, math, english, science }
+  const {
+    name,
+    scores: [math, english, science],
+  } = student;
+  return { name, math, english, science };
 }
 
-module.exports = { getFirstTwo, swapValues, extractName, withDefaults, getScores };
+module.exports = {
+  getFirstTwo,
+  swapValues,
+  extractName,
+  withDefaults,
+  getScores,
+};
