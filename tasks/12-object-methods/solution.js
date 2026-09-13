@@ -1,25 +1,42 @@
 function getPropertyNames(obj) {
-  // TODO: return array of object's keys
+  return Object.keys(obj);
 }
 
 function getPropertyValues(obj) {
-  // TODO: return array of object's values
+  return Object.values(obj);
 }
 
 function toPairs(obj) {
-  // TODO: return array of [key, value] pairs
+  return Object.entries(obj);
 }
 
 function fromPairs(pairs) {
-  // TODO: convert array of [key, value] pairs back to object
+  return Object.fromEntries(pairs);
 }
 
 function pick(obj, keys) {
-  // TODO: return new object with only the specified keys
+  const result = {};
+  for (const key of keys) {
+    if (key in obj) {
+      result[key] = obj[key];
+    }
+  }
+  return result;
 }
 
 function invert(obj) {
-  // TODO: swap keys and values
+  const result = {};
+  for (const [key, value] of Object.entries(obj)) {
+    result[value] = key;
+  }
+  return result;
 }
 
-module.exports = { getPropertyNames, getPropertyValues, toPairs, fromPairs, pick, invert };
+module.exports = {
+  getPropertyNames,
+  getPropertyValues,
+  toPairs,
+  fromPairs,
+  pick,
+  invert,
+};
