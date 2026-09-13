@@ -1,9 +1,18 @@
 function getDateParts(date) {
-  // TODO: Implement this function
+  return {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+  };
 }
 
 function formatDate(date, format) {
   // TODO: Implement this function
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+
+  return format.replace("YYYY", year).replace("MM", month).replace("DD", day);
 }
 
 function addDays(date, days) {
@@ -11,15 +20,19 @@ function addDays(date, days) {
 }
 
 function daysBetween(date1, date2) {
-  // TODO: Implement this function
+  const difference = Math.abs(date2 - date1);
+
+  return difference / (1000 * 60 * 60 * 24);
 }
 
 function isWeekend(date) {
-  // TODO: Implement this function
+  const day = date.getDay();
+
+  return day === 0 || day === 6;
 }
 
 function isLeapYear(year) {
-  // TODO: Implement this function
+  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 }
 
 module.exports = {
@@ -28,5 +41,5 @@ module.exports = {
   addDays,
   daysBetween,
   isWeekend,
-  isLeapYear
+  isLeapYear,
 };
