@@ -20,6 +20,7 @@
 function arithmeticOps(a, b) {
   // TODO: Return an object with sum (+), difference (-), product (*),
   //       quotient (/), remainder (%), and power (**)
+  return (a + b, a - b, a * b, a / b, a % b, a ** b);
 }
 
 // ─── 2. Comparison Operators ────────────────────────────────────────
@@ -37,6 +38,7 @@ function arithmeticOps(a, b) {
 function compareValues(a, b) {
   // TODO: Return an object with the result of each comparison operator
   //       ==, ===, !=, !==, >, <, >=, <=
+  return (a == b, a === b, a != b, a !== b, a > b, a < b, a >= b, a <= b);
 }
 
 // ─── 3. Logical Operators ───────────────────────────────────────────
