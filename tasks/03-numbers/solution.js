@@ -6,7 +6,6 @@
  */
 function add(a, b) {
   // TODO: return sum of a and b
-  return a + b;
 }
 
 /**
@@ -16,7 +15,6 @@ function add(a, b) {
  */
 function isEven(num) {
   // TODO: return true if num is even
-  return num % 2 === 0;
 }
 
 /**
@@ -28,7 +26,7 @@ function isEven(num) {
  */
 function clamp(num, min, max) {
   // TODO: clamp a number to a range: clamp(15, 0, 10) -> 10, clamp(-5, 0, 10) -> 0
-} return Math.min(Math.max(num, min), max);
+}
 
 /**
  * Rounds a number to a specified number of decimal places.
@@ -38,7 +36,7 @@ function clamp(num, min, max) {
  */
 function roundTo(num, decimals) {
   // TODO: round to specified decimal places: roundTo(3.14159, 2) -> 3.14
-}return Number(num.toFixed(decimals));
+}
 
 /**
  * Converts Celsius to Fahrenheit.
@@ -47,7 +45,7 @@ function roundTo(num, decimals) {
  */
 function celsiusToFahrenheit(celsius) {
   // TODO: convert: formula is (celsius * 9/5) + 32
-} return (celsius * 9/5) + 32;
+}
 
 module.exports = {
   add,

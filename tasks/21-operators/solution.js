@@ -20,15 +20,6 @@
 function arithmeticOps(a, b) {
   // TODO: Return an object with sum (+), difference (-), product (*),
   //       quotient (/), remainder (%), and power (**)
-}function arithmeticOps(a, b) {
-    return {
-        sum: a + b,
-        difference: a - b,
-        product: a * b,
-        quotient: a / b,
-        remainder: a % b,
-        power: a ** b
-    };
 }
 
 // ─── 2. Comparison Operators ────────────────────────────────────────
@@ -46,17 +37,7 @@ function arithmeticOps(a, b) {
 function compareValues(a, b) {
   // TODO: Return an object with the result of each comparison operator
   //       ==, ===, !=, !==, >, <, >=, <=
-}return {
-        equal: a == b,
-        strictEqual: a === b,
-        notEqual: a != b,
-        strictNotEqual: a !== b,
-        greater: a > b,
-        less: a < b,
-        greaterOrEqual: a >= b,
-        lessOrEqual: a <= b
-    };
-
+}
 
 // ─── 3. Logical Operators ───────────────────────────────────────────
 
@@ -77,13 +58,7 @@ function logicalOps(a, b) {
   //   or: a || b
   //   notA: !a
   //   notB: !b
-}return {
-        and: a && b,
-        or: a || b,
-        notA: !a,
-        notB: !b
-    };
-
+}
 
 // ─── 4. Assignment Operators ────────────────────────────────────────
 
@@ -107,24 +82,7 @@ function logicalOps(a, b) {
 function assignmentOps(initial, value) {
   // TODO: Start with `initial`, apply each compound assignment operator
   //       sequentially with `value`, and record the result after each step
-}   let result = initial;
-    result += value;
-    let afterAdd = result;
-    result -= value;
-    let afterSub = result;
-    result *= value;
-    let afterMul = result;
-    result /= value;
-    let afterDiv = result;
-    result %= value;
-    let afterMod = result;
-    return {
-        afterAdd: afterAdd,
-        afterSub: afterSub,
-        afterMul: afterMul,
-        afterDiv: afterDiv,
-        afterMod: afterMod
-    };
+}
 
 // ─── 5. Nullish Coalescing & Optional Chaining ──────────────────────
 
@@ -178,14 +136,7 @@ function bitwiseOps(a, b) {
   //   notA: ~a
   //   leftShift: a << 1
   //   rightShift: a >> 1
-}return {
-    and: a & b,
-    or: a | b,
-    xor: a ^ b,
-    notA: ~a,
-    eftShift: a << 1,
-    rightShift: a >> 1
-};
+}
 
 // ─── 7. Ternary Operator ────────────────────────────────────────────
 
@@ -207,15 +158,6 @@ function ternaryGrade(score) {
   // TODO: Use chained ternary operators to return the grade
   //       score >= 90 ? "A" : score >= 80 ? "B" : ...
 }
-return score >= 90
-        ? "A"
-        : score >= 80
-        ? "B"
-        : score >= 70
-        ? "C"
-        : score >= 60
-        ? "D"
-        : "F";
 
 module.exports = {
   arithmeticOps,
