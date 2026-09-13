@@ -1,21 +1,22 @@
 function mergeArrays(arr1, arr2) {
-  // TODO: merge two arrays using spread
+  return [...arr1, ...arr2];
 }
 
 function cloneObject(obj) {
-  // TODO: create a shallow clone using spread
+  return [...obj];
 }
 
 function addDefaults(obj, defaults) {
-  // TODO: merge defaults with obj (obj properties take precedence)
+  return { ...defaults, ...obj };
 }
 
 function firstAndRest(arr) {
-  // TODO: return { first, rest } using rest syntax with destructuring
+  const [first, ...rest] = arr;
+  return { first, rest };
 }
 
 function maxOfAll(...numbers) {
-  // TODO: use rest parameters to accept any number of args, return the maximum
+  return Math.max(...numbers);
 }
 
 function removeProperty(obj, prop) {
@@ -23,4 +24,11 @@ function removeProperty(obj, prop) {
   // Hint: you can destructure with a dynamic key by using {[prop]: removed, ...rest} = obj
 }
 
-module.exports = { mergeArrays, cloneObject, addDefaults, firstAndRest, maxOfAll, removeProperty };
+module.exports = {
+  mergeArrays,
+  cloneObject,
+  addDefaults,
+  firstAndRest,
+  maxOfAll,
+  removeProperty,
+};
