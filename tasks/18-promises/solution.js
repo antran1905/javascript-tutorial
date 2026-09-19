@@ -3,7 +3,9 @@
  * @returns {Promise<void>}
  */
 function delay(ms) {
-  // TODO: return a promise that resolves after ms milliseconds
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 }
 
 /**
@@ -11,7 +13,15 @@ function delay(ms) {
  * @returns {Promise<Object>}
  */
 function fetchData(shouldSucceed) {
-  // TODO: if shouldSucceed true, resolve with { data: 'Success!' } after 100ms. Else reject with Error('Failed to fetch')
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldSucceed) {
+        resolve({ data: "Success!" });
+      } else {
+        reject(new Error("Failed to fetch"));
+      }
+    }, 100);
+  });
 }
 
 /**
