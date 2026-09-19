@@ -1,9 +1,13 @@
 function isValidEmail(str) {
-  // TODO: Test with regex for basic email: something@something.something. Return boolean.
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return regex.test(str);
 }
 
 function extractNumbers(str) {
-  // TODO: Use match() with /\d+/g to find all numbers, return as array of strings. Return empty array if none found.
+  const result = str.match(/\d+/g);
+
+  return result || [];
 }
 
 function replaceVowels(str, replacement) {
@@ -28,5 +32,5 @@ module.exports = {
   replaceVowels,
   isStrongPassword,
   extractHashtags,
-  maskCreditCard
+  maskCreditCard,
 };
