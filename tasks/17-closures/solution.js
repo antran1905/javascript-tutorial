@@ -3,14 +3,53 @@
  * @returns {Object} { increment, decrement, getCount, reset }
  */
 function createCounter(initial = 0) {
-  // TODO: implement counter with closure
+  let count = initial;
+
+  return {
+    increment() {
+      count++;
+      return count;
+    },
+
+    decrement() {
+      count--;
+      return count;
+    },
+
+    getCount() {
+      return count;
+    },
+
+    reset() {
+      count = initial;
+      return count;
+    },
+  };
 }
 
 /**
  * @returns {Object} { get(key), set(key, value), has(key), clear() }
  */
 function createCache() {
-  // TODO: implement cache using closure (e.g., Map or Object)
+  const cache = new Map();
+
+  return {
+    get(key) {
+      return cache.get(key);
+    },
+
+    set(key, value) {
+      cache.set(key, value);
+    },
+
+    has(key) {
+      return cache.has(key);
+    },
+
+    clear() {
+      cache.clear();
+    },
+  };
 }
 
 /**
