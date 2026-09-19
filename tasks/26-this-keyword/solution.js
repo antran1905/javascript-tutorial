@@ -1,9 +1,15 @@
 function createGreeter(name) {
-  // TODO: Return object { name, greet() } where greet() returns 'Hello, I am <this.name>' using `this`
+  return {
+    name: name,
+
+    greet: function () {
+      return `Hello, I am ${this.name}`;
+    },
+  };
 }
 
 function fixThis(obj, methodName) {
-  // TODO: Return a bound version of obj[methodName] that always uses obj as `this`. Use .bind()
+  return obj[methodName].bind(obj);
 }
 
 function callWithContext(fn, context, ...args) {
@@ -15,7 +21,7 @@ function applyWithContext(fn, context, args) {
 }
 
 function createTimer(label) {
-  // TODO: Return object with label property, start() method that stores start time in this.startTime = Date.now(), 
+  // TODO: Return object with label property, start() method that stores start time in this.startTime = Date.now(),
   // and elapsed() that returns Date.now() - this.startTime. Use regular function for methods.
 }
 
@@ -24,5 +30,5 @@ module.exports = {
   fixThis,
   callWithContext,
   applyWithContext,
-  createTimer
+  createTimer,
 };
