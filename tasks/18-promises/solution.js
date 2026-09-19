@@ -4,7 +4,12 @@
  */
 function delay(ms) {
   // TODO: return a promise that resolves after ms milliseconds
-}
+}const promise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve();
+  }, ms);
+});
+return promise;
 
 /**
  * @param {boolean} shouldSucceed
@@ -12,7 +17,16 @@ function delay(ms) {
  */
 function fetchData(shouldSucceed) {
   // TODO: if shouldSucceed true, resolve with { data: 'Success!' } after 100ms. Else reject with Error('Failed to fetch')
-}
+}const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (shouldSucceed) {
+      resolve({ data: 'Success!' });
+    } else {
+      reject(new Error('Failed to fetch'));
+    }
+  }, 100);
+});
+return promise;
 
 /**
  * @param {any} initial
@@ -21,7 +35,13 @@ function fetchData(shouldSucceed) {
  */
 function chainPromises(initial, ...fns) {
   // TODO: start with Promise.resolve(initial), then chain each fn using .then(). Return final promise.
-}
+}setTimeout(() => {
+  let promise = Promise.resolve(initial);
+  for (const fn of fns) {
+    promise = promise.then(fn);
+  }
+  return promise;
+}, 0);
 
 /**
  * @param {Promise[]} promises
@@ -29,7 +49,21 @@ function chainPromises(initial, ...fns) {
  */
 function promiseAll(promises) {
   // TODO: implement a simplified Promise.all. DO NOT use Promise.all.
-}
+}setTimeout(() => {
+  const results = [];
+  let completed = 0;
+  return new Promise((resolve, reject) => {
+    promises.forEach((promise, index) => {
+      promise.then((result) => {
+        results[index] = result;
+        completed++;
+        if (completed === promises.length) {
+          resolve(results);
+        }
+      }).catch(reject);
+    });
+  });
+}, 0);  
 
 /**
  * @param {Promise} promise
@@ -38,6 +72,13 @@ function promiseAll(promises) {
  */
 function timeout(promise, ms) {
   // TODO: race promise against timeout. Reject with Error('Operation timed out') if timeout happens first.
-}
+}setTimeout(() => {
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error('Operation timed out'));
+    }, ms);
+  } );
+  return Promise.race([promise, timeoutPromise]);
+}, 0);
 
 module.exports = { delay, fetchData, chainPromises, promiseAll, timeout };

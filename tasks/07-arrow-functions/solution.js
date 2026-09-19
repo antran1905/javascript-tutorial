@@ -4,14 +4,14 @@
  * @returns {number} The doubled number.
  */
 const double = null; // TODO: Implement as arrow function
-
+const double = (n) => n * 2;
 /**
  * Checks if a number is strictly greater than 0.
  * @param {number} n - The number to check.
  * @returns {boolean} True if positive, false otherwise.
  */
 const isPositive = null; // TODO: Implement as arrow function
-
+const isPositive = (n) => n > 0;
 /**
  * Returns a full name from first and last name.
  * @param {string} first - First name.
@@ -19,13 +19,14 @@ const isPositive = null; // TODO: Implement as arrow function
  * @returns {string} The full name separated by a space.
  */
 const getFullName = null; // TODO: Implement as arrow function
-
+const getFullName = (first, last) => `${first} ${last}`;
 /**
  * Filters an array to keep only even numbers.
  * @param {number[]} arr - Array of numbers.
  * @returns {number[]} New array with only even numbers.
  */
 const filterEvens = null; // TODO: Implement as arrow function
+const filterEvens = (arr) => arr.filter((n) => n % 2 === 0);
 
 /**
  * Sorts an array of numbers in descending order.
@@ -33,5 +34,6 @@ const filterEvens = null; // TODO: Implement as arrow function
  * @returns {number[]} New sorted array.
  */
 const sortDescending = null; // TODO: Implement as arrow function
+const sortDescending = (arr) => [...arr].sort((a, b) => b - a);
 
 module.exports = { double, isPositive, getFullName, filterEvens, sortDescending };

@@ -37,6 +37,12 @@ function getDayType(day) {
  */
 function getSign(num) {
   // TODO: Implement this function
+}if (num > 0) {
+  return 'positive';
+} else if (num < 0) {
+  return 'negative';
+} else {
+  return 'zero';
 }
 
 /**
@@ -47,6 +53,10 @@ function getSign(num) {
  */
 function canVote(age, isCitizen) {
   // TODO: Implement this function
+}if (age >= 18 && isCitizen) {
+  return true;
+} else {
+  return false;
 }
 
 module.exports = { getGrade, fizzBuzz, getDayType, getSign, canVote };

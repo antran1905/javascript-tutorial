@@ -4,6 +4,7 @@
  */
 function getGreeting() {
   // TODO: return 'Hello, JavaScript!'
+  return 'Hello, JavaScript!';
 }
 
 /**
@@ -12,6 +13,7 @@ function getGreeting() {
  */
 function getAge() {
   // TODO: return 25
+  return 25;
 }
 
 /**
@@ -20,6 +22,7 @@ function getAge() {
  */
 function isStudent() {
   // TODO: return true
+  return true;
 }
 
 /**
@@ -28,6 +31,7 @@ function isStudent() {
  */
 function getNothing() {
   // TODO: return null
+  return null;
 }
 
 /**
@@ -37,6 +41,7 @@ function getNothing() {
  */
 function getTypeOf(value) {
   // TODO: use the typeof operator to return the type of `value`
+  return typeof value;
 }
 
 module.exports = {

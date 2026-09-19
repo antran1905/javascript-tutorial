@@ -5,6 +5,17 @@
  */
 function createCounter() {
   // TODO: Implement this function
+}let count =0;
+return{
+  increment: function(){
+    count++;
+  },
+  decrement: function(){
+    count--;
+  },
+  getCount: function(){
+    return count;
+  }
 }
 
 /**
@@ -14,6 +25,14 @@ function createCounter() {
  */
 function makePrivate(initialValue) {
   // TODO: Implement this function
+}let value = 0;
+return {
+  get: function(){
+    return value;
+  },
+  set: function(newValue){
+    return value = newValue;
+  }
 }
 
 /**
@@ -27,7 +46,8 @@ function blockScopeDemo() {
   
   if (true) {
     // TODO: Create a block-scoped innerVar that gets set to 'block'
-  }
+  }console.log(innerVar);
+   console.log(outerVar);
   
   // Do not modify the return statement
   return [outerVar, innerVar];
@@ -39,6 +59,10 @@ function blockScopeDemo() {
  */
 function createIdGenerator() {
   // TODO: Implement this function
+}let createIDGenerator = 0;
+return function(){
+  createIDGenerator++;
+  return createIDGenerator;
 }
 
 /**
@@ -51,6 +75,10 @@ function loopWithClosure() {
   const funcs = [];
   // TODO: Use a loop to populate `funcs` with functions that return their index.
   return funcs;
+}for (i=0; i<5; i++){
+  funcs.push(function() {
+    return i;
+  });
 }
 
 module.exports = { createCounter, makePrivate, blockScopeDemo, createIdGenerator, loopWithClosure };

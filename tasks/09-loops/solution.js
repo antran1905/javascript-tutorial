@@ -26,7 +26,12 @@ function factorial(n) {
  */
 function repeatString(str, times) {
   // TODO: Implement this function
+} let result = ' ';
+for (i=0 ; i< times; i++){
+  result += str;
 }
+return result;
+
 
 /**
  * Returns the index of a target element in an array, or -1 if not found.
@@ -37,8 +42,12 @@ function repeatString(str, times) {
  */
 function findIndex(arr, target) {
   // TODO: Implement this function
+}for (let i = 0; i < arr.length; i++) {
+  if (arr[i]== target){
+    return i;
+  }
 }
-
+return -1;
 /**
  * Counts the number of vowels (a, e, i, o, u) in a string (case-insensitive).
  * @param {string} str
@@ -46,6 +55,11 @@ function findIndex(arr, target) {
  */
 function countVowels(str) {
   // TODO: Implement this function
-}
+}let count = 0;
+for (let i =0; i< str.length; i++)
+  if (str[i].toLowerCase() === 'a' || str[i].toLowerCase() === 'e' || str[i].toLowerCase() === 'i' || str[i].toLowerCase() === 'o' || str[i].toLowerCase() === 'u'){
+    count++;
+  }
+return count;
 
 module.exports = { sumRange, factorial, repeatString, findIndex, countVowels };
