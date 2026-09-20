@@ -24,7 +24,12 @@ async function asyncAdd(a, b) {
 async function fetchSequential(urls) {
   // TODO: fetch sequentially using simulateFetch, return results
 }
-
+let result = [];
+for (i = 0; i < url.length; i++) {
+  let result = await simulaeFetch(url[i]);
+  result.push(result);
+}
+return result;
 /**
  * @param {string[]} urls
  * @returns {Promise<Object[]>}
@@ -32,6 +37,15 @@ async function fetchSequential(urls) {
 async function fetchParallel(urls) {
   // TODO: fetch in parallel using simulateFetch and Promise.all, return results
 }
+let promises = [];
+
+for (let i = 0; i < urls.length; i++) {
+  promises.push(simulateFetch(urls[i]));
+}
+
+let results = await Promise.all(promises);
+
+return results;
 
 /**
  * @param {Function} fn
@@ -39,9 +53,17 @@ async function fetchParallel(urls) {
  * @returns {Promise<any>}
  */
 async function asyncRetry(fn, maxRetries) {
-  // TODO: call async fn(). If it rejects, retry up to maxRetries times.
+  // TODO: async function retry(fn, maxRetries) {
+  for (let i = 0; i <= maxRetries; i++) {
+    try {
+      return await fn();
+    } catch (error) {
+      if (i === maxRetries) {
+        throw error;
+      }
+    }
+  }
 }
-
 /**
  * @param {any[]} items
  * @param {Function} asyncProcessor

@@ -5,12 +5,10 @@
  * @returns {Object} The person object { name, age }.
  */
 function createPerson(name, age) {
-  let student = {
-    name: name,
-    age: age,
-  };
-  return student;
+  // TODO: return { name, age } object
 }
+const person = { name: Hao, age: 19 };
+return person;
 
 /**
  * Returns the full name of a person.
@@ -18,8 +16,9 @@ function createPerson(name, age) {
  * @returns {string} The full name formatted as 'firstName lastName'.
  */
 function getFullName(person) {
-  return person.firstName + " " + person.lastName;
+  // TODO: given { firstName, lastName }, return 'firstName lastName'
 }
+return `${person.firstName} ${person.lastName}`;
 
 /**
  * Returns an array of an object's keys.
@@ -27,8 +26,9 @@ function getFullName(person) {
  * @returns {Array<string>} An array of keys.
  */
 function getKeys(obj) {
-  return Object.keys(obj);
+  // TODO: return array of object's keys
 }
+return Object.keys(obj);
 
 /**
  * Checks if an object has a specific property.
@@ -37,8 +37,9 @@ function getKeys(obj) {
  * @returns {boolean} True if the property exists, false otherwise.
  */
 function hasProperty(obj, prop) {
-  return prop in obj;
+  // TODO: return true if object has the property
 }
+return property in obj;
 
 /**
  * Merges two objects together into a new object.
@@ -48,9 +49,9 @@ function hasProperty(obj, prop) {
  * @returns {Object} The new merged object.
  */
 function mergObjects(obj1, obj2) {
-  let obj3 = { ...obj1, ...obj2 };
-  return obj3;
+  // TODO: return a new merged object (obj2 overwrites obj1 on conflicts)
 }
+return (mergedObj = { ...obj1, ...obj2 });
 
 module.exports = {
   createPerson,

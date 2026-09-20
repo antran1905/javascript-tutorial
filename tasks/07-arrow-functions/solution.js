@@ -7,6 +7,8 @@ const double = (n) => {
   return n * 2;
 }; // TODO: Implement as arrow function
 
+const double = null; // TODO: Implement as arrow function
+const double = (n) => n * 2;
 /**
  * Checks if a number is strictly greater than 0.
  * @param {number} n - The number to check.
@@ -19,6 +21,8 @@ const isPositive = (n) => {
   return false;
 };
 
+const isPositive = null; // TODO: Implement as arrow function
+const isPositive = (n) => n > 0;
 /**
  * Returns a full name from first and last name.
  * @param {string} first - First name.
@@ -29,6 +33,8 @@ const getFullName = (first, last) => {
   return first + last;
 }; // TODO: Implement as arrow function
 
+const getFullName = null; // TODO: Implement as arrow function
+const getFullName = (first, last) => `${first} ${last}`;
 /**
  * Filters an array to keep only even numbers.
  * @param {number[]} arr - Array of numbers.
@@ -43,6 +49,8 @@ const filterEvens = (arr) => {
   }
   return newArrays;
 }; // TODO: Implement as arrow function
+const filterEvens = null; // TODO: Implement as arrow function
+const filterEvens = (arr) => arr.filter((n) => n % 2 === 0);
 
 /**
  * Sorts an array of numbers in descending order.
@@ -62,6 +70,8 @@ const sortDescending = (arr) => {
   }
   return arr;
 }; // TODO: Implement as arrow function
+const sortDescending = null; // TODO: Implement as arrow function
+const sortDescending = (arr) => [...arr].sort((a, b) => b - a);
 
 module.exports = {
   double,

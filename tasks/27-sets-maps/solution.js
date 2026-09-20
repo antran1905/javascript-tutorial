@@ -5,6 +5,7 @@ function uniqueValues(arr) {
 
 function setOperations(arr1, arr2) {
   // TODO: Return { union: [...], intersection: [...], difference: [...] }
+
   // Union = all unique from both. Intersection = in both. Difference = in arr1 but not arr2.
   const set1 = new Set(arr1);
   const set2 = new Set(arr2);
@@ -31,10 +32,20 @@ function countOccurrences(arr) {
 function groupBy(arr, keyFn) {
   // TODO: Group items by keyFn result using Map.
   // E.g. groupBy([1,2,3,4,5], n => n % 2 === 0 ? 'even' : 'odd') -> Map { 'odd' => [1,3,5], 'even' => [2,4] }
+  const map = new Map();
+
+  arr.forEach((item) => {
+    const key = keyFn(item);
+    if (!map.has(key)) map.set(key, []);
+    map.get(key).push(item);
+  });
+
+  return map;
 }
 
 function mapToObject(map) {
   // TODO: Convert a Map to a plain object
+  return Object.fromEntries(map);
 }
 
 function objectToMap(obj) {

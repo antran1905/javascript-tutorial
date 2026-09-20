@@ -24,17 +24,17 @@ function createCounter() {
  * @returns {object}
  */
 function makePrivate(initialValue) {
-  let value = initialValue;
-  function get() {
-    return value;
-  }
-
-  function set(newValue) {
-    value = newValue;
-  }
-
-  return { get, set };
+  // TODO: Implement this function
 }
+let value = 0;
+return {
+  get: function () {
+    return value;
+  },
+  set: function (newValue) {
+    return (value = newValue);
+  },
+};
 
 /**
  * Demonstrates block scope.
@@ -46,7 +46,7 @@ function blockScopeDemo() {
   let innerVar = "initial";
 
   if (true) {
-    innerVar = "block";
+    // TODO: Create a block-scoped innerVar that gets set to 'block'
   }
 
   // Do not modify the return statement
@@ -58,17 +58,13 @@ function blockScopeDemo() {
  * @returns {function}
  */
 function createIdGenerator() {
-  let id = 1;
-
-  function incrementIDs() {
-    let result = id;
-    id++;
-
-    return result;
-  }
-
-  return incrementIDs;
+  // TODO: Implement this function
 }
+let createIDGenerator = 0;
+return function () {
+  createIDGenerator++;
+  return createIDGenerator;
+};
 
 /**
  * Returns an array of 5 functions.
@@ -84,6 +80,11 @@ function loopWithClosure() {
     });
   }
   return funcs;
+}
+for (i = 0; i < 5; i++) {
+  funcs.push(function () {
+    return i;
+  });
 }
 
 module.exports = {

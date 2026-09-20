@@ -4,8 +4,9 @@
  * @returns {*} The first element.
  */
 function getFirst(arr) {
-  return arr[0];
+  // TODO: return first element
 }
+return arr[0];
 
 /**
  * Returns the last element of an array.
@@ -13,9 +14,9 @@ function getFirst(arr) {
  * @returns {*} The last element.
  */
 function getLast(arr) {
-  const count = arr.length;
-  return arr[count - 1];
+  // TODO: return last element
 }
+return arr[arr.length - 1];
 
 /**
  * Returns a NEW array without the first element.
@@ -24,10 +25,9 @@ function getLast(arr) {
  * @returns {Array} The new array.
  */
 function removeFirst(arr) {
-  let result = [...arr];
-  result.splice(0, 1);
-  return result;
+  // TODO: return NEW array without first element (don't mutate original)
 }
+return arr.slice(1);
 
 /**
  * Returns a NEW array with a value inserted at a specific index.
@@ -37,10 +37,10 @@ function removeFirst(arr) {
  * @returns {Array} The new array.
  */
 function insertAt(arr, index, value) {
-  let result = [...arr];
-  result.splice(index, 0, value);
-  return result;
+  // TODO: return NEW array with value inserted at index
 }
+insertAt = (arr, index, value);
+return arr.slice(0, index).concat([value]).concat(arr.slice(index));
 
 /**
  * Returns a NEW array with duplicates removed.
@@ -63,6 +63,7 @@ function unique(arr) {
   }
   return newArrays;
 }
+// TODO: return NEW array with duplicates removed: [1,2,2,3,3] -> [1,2,3]
 
 module.exports = {
   getFirst,

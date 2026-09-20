@@ -14,11 +14,16 @@ function extractName(user) {
   } = user;
   return `${first} ${last}`;
 }
+const extractName = (user) => `${user.name.first} ${user.name.last}`;
 
 function withDefaults(options) {
   const { color = "blue", size = "medium", count = 1 } = options;
   return { color, size, count };
 }
+const withDefaults = (options) => {
+  const { color = "blue", size = "medium", count = 1 } = options;
+  return { color, size, count };
+};
 
 function getScores(student) {
   // TODO: given { name, scores: [math, english, science] }, return { name, math, english, science }

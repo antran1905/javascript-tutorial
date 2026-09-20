@@ -14,6 +14,7 @@ function capitalize(str) {
  * @returns {number} The string length.
  */
 function countCharacters(str) {
+  // TODO: return the length of `str`
   return str.length;
 }
 
@@ -39,21 +40,11 @@ function reverseString(str) {
  * @returns {string} The truncated string.
  */
 function truncate(str, maxLength) {
-  let count = 0;
-  let word = "";
+  // TODO: if str is longer than maxLength, cut it and add '...': truncate('Hello World', 5) -> 'Hello...'
   if (str.length > maxLength) {
-    while (count < maxLength) {
-      word = word + str[count];
-      count++;
-    }
-    return word + "...";
-  } else {
-    while (count < str.length) {
-      word = word + str[count];
-      count++;
-    }
-    return word;
+    return str.substring(0, maxLength) + "...";
   }
+  return str;
 }
 
 /**
@@ -62,13 +53,11 @@ function truncate(str, maxLength) {
  * @returns {boolean} True if palindrome, false otherwise.
  */
 function isPalindrome(str) {
-  let count = str.length - 1;
-  let word = "";
-  while (count >= 0) {
-    word = word + str[count];
-    count--;
-  }
-  if (word.toLowerCase() === str.toLowerCase()) return true;
+  // TODO: check if string reads same forwards/backwards (case-insensitive): 'Racecar' -> true
+}
+if (str.toLowerCase() === str.toLowerCase().split("").reverse().join("")) {
+  return true;
+} else {
   return false;
 }
 
@@ -77,5 +66,5 @@ module.exports = {
   countCharacters,
   reverseString,
   truncate,
-  isPalindrome
+  isPalindrome,
 };

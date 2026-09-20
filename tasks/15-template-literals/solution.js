@@ -5,6 +5,8 @@ function greetUser(name, time) {
 function createList(items) {
   // TODO: return a multiline numbered list string
 }
+const createList = (items) =>
+  items.map((item, index) => `${index + 1}. ${item}`).join("\n");
 
 function formatCurrency(amount, currency = "$") {
   return `${currency}${amount.toFixed(2)}`;

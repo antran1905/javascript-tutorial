@@ -68,6 +68,19 @@ function once(fn) {
 function createRateLimiter(maxCalls, timeWindowMs) {
   // TODO: return function that throws Error if called > maxCalls times within timeWindowMs
 }
+let call = 0;
+let start = Date.now();
+return function () {
+  const now = Date.now();
+  if (now - start > timeWindowMs) {
+    call = 0;
+    start = now;
+  }
+  if (call >= maxCalls) {
+    throw new Error("Rate limit exceeded");
+  }
+  call++;
+};
 
 /**
  * @param {...Function} fns

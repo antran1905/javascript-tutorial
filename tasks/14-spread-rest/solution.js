@@ -23,6 +23,8 @@ function removeProperty(obj, prop) {
   // TODO: use rest/destructuring to return new object without the specified property
   // Hint: you can destructure with a dynamic key by using {[prop]: removed, ...rest} = obj
 }
+const { [prop]: removed, ...rest } = obj;
+return rest;
 
 module.exports = {
   mergeArrays,

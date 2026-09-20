@@ -67,6 +67,13 @@ function getSign(num) {
   if (num > 0) return "positive";
   if (num < 0) return "negative";
   return "zero";
+  // TODO: Implement this function
+}if (num > 0) {
+  return 'positive';
+} else if (num < 0) {
+  return 'negative';
+} else {
+  return 'zero';
 }
 
 /**
@@ -76,9 +83,10 @@ function getSign(num) {
  * @returns {boolean} True if age >= 18 and isCitizen is true.
  */
 function canVote(age, isCitizen) {
-  if (age >= 18 && isCitizen == true) {
-    return true;
-  }
+  // TODO: Implement this function
+}if (age >= 18 && isCitizen) {
+  return true;
+} else {
   return false;
 }
 

@@ -5,7 +5,7 @@
  * @returns {number} The sum.
  */
 function add(a, b) {
-  return a + b;
+  // TODO: return sum of a and b
 }
 
 /**
@@ -14,10 +14,7 @@ function add(a, b) {
  * @returns {boolean} True if even.
  */
 function isEven(num) {
-  if (num % 2 == 0) {
-    return true;
-  }
-  return false;
+  // TODO: return true if num is even
 }
 
 /**
@@ -28,9 +25,7 @@ function isEven(num) {
  * @returns {number} The clamped value.
  */
 function clamp(num, min, max) {
-  if (num < min) return min;
-  if (num >= min && num <= max) return num;
-  if (num > max) return max;
+  // TODO: clamp a number to a range: clamp(15, 0, 10) -> 10, clamp(-5, 0, 10) -> 0
 }
 
 /**
@@ -40,8 +35,7 @@ function clamp(num, min, max) {
  * @returns {number} The rounded number.
  */
 function roundTo(num, decimals) {
-  let rounds = Math.round(num * 10 ** decimals) / 10 ** decimals;
-  return rounds;
+  // TODO: round to specified decimal places: roundTo(3.14159, 2) -> 3.14
 }
 
 /**
@@ -50,7 +44,7 @@ function roundTo(num, decimals) {
  * @returns {number} The temperature in Fahrenheit.
  */
 function celsiusToFahrenheit(celsius) {
-  return celsius * (9 / 5) + 32;
+  // TODO: convert: formula is (celsius * 9/5) + 32
 }
 
 module.exports = {

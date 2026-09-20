@@ -40,6 +40,7 @@ function sum(...numbers) {
 function applyOperation(a, b, operation) {
   return operation(a, b);
 }
+return total;
 
 /**
  * Creates a function that multiplies its argument by a given factor.

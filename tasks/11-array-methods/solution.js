@@ -40,19 +40,18 @@ function findByName(people, name) {
  * @returns {boolean}
  */
 function allPositive(arr) {
-  const result = arr.every((number) => number > 0);
-  return result;
+  // TODO: use .every() to check if all numbers are positive
 }
+const allPos = arr.every((n) => n > 0);
 
 /**
  * @param {Array<{name: string, age: number}>} people
  * @returns {Array<{name: string, age: number}>}
  */
 function sortByAge(people) {
-  const newPeoples = [...people];
-  newPeoples.sort((a, b) => a.age - b.age);
-  return newPeoples;
+  // TODO: use .sort() to sort ascending by age. Return NEW sorted array.
 }
+const SortBA = [...people].sort((a, b) => a.age - b.age);
 
 module.exports = {
   doubleAll,

@@ -21,6 +21,13 @@ function explicitParsing(str) {
 
 function coercionQuiz() {
   // TODO: Implement this function
+  return {
+    add: "5" + 2,
+    subtract: "5" - 2,
+    multiply: "5" * 2,
+    divide: "5" / 2,
+    boolean: true + 1,
+  };
 }
 
 function strictVsLoose(a, b) {

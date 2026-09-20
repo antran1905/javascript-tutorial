@@ -37,6 +37,13 @@ function parseJSON(jsonString) {
 function validateAge(age) {
   // TODO: throw TypeError if not a number, RangeError if < 0 or > 150, else return age
 }
+if (typeof age !== `number`) {
+  throw new TypeError(`Age must be a number`);
+}
+if (age < 0 || age > 150) {
+  throw new RangeError(`Age must be between 0 and 150`);
+}
+return age;
 
 class ValidationError extends Error {
   // TODO: extend Error, set 'field' property in constructor
@@ -48,6 +55,9 @@ class ValidationError extends Error {
  */
 function validateEmail(email) {
   // TODO: throw ValidationError with field='email' if no '@', else return email
+}
+if (email.includes(`@`)) {
+  throw new ValidationError(`Invalid email address`, `email`);
 }
 
 /**
