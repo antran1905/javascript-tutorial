@@ -79,7 +79,7 @@ function createIdGenerator() {
 function loopWithClosure() {
   const funcs = [];
   for (let i = 0; i < 5; i++) {
-    funcs.push(function () {
+    funcs.push(() => {
       return i;
     });
   }
